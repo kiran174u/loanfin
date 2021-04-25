@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="loan repayment schedule">
+    <meta name="author" content="Ravi Kiran">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+    <table style="width:100%">
+        <tr>
+            <th>Payment No (in months)</th>
+            <th>Payment Amount</th>
+            <th>Principal Amount Paid</th>
+            <th>Interest Amount Paid</th>
+            <th>Loan Outstanding Balance</th>
+        </tr>
+        {% for item in result %}
+        <tr>
+            {% for i in item %}
+            <td>{{i}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

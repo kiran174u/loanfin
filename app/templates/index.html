@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="loan repayment schedule">
+    <meta name="author" content="Ravi Kiran">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/calculate" method="post">
+            <div class="row">
+                <div class="column">
+                    <label for="loan-amount">Loan amount:</label>
+                    <input type="number" id="loan-amount" name="loan-amount" step="any" min="1" required><br><br>
+                </div>
+                <div class="column">
+                    <label for="interest-rate">Interest rate:</label>
+                    <input type="number" id="interest-rate" name="interest-rate" step="any" min="0.1" max="100" required><br><br>
+                </div>
+                <div class="column">
+                    <label for="loan-period">Loan period (in months):</label>
+                    <input type="number" id="loan-period" name="loan-period" min="1" required><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit" class="button">
+                <input type="reset" value="Clear" class="button">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
